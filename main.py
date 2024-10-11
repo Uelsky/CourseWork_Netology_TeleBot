@@ -79,7 +79,10 @@ with conn.cursor() as cur:
             known_users.append(cid)
             userStep[cid] = 0
             new_user(cur, cid)
-            bot.send_message(cid, "Hello, stranger, let study English...")
+            bot.send_message(cid, '\n'.join(["Привет 👋",
+                                             "Давай попрактикуемся в английском языке.",
+                                             "Тренировки можешь проходить в удобном для себя темпе."
+                                             ]))
         markup = types.ReplyKeyboardMarkup(row_width=2)
 
         buttons = []
